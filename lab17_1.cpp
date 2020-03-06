@@ -37,9 +37,11 @@ int main(){
         cout << "---------------------------------\n";
         cout << "Please input your command: ";
         getline(cin,command);
+         if(rule == "exit")
+            break;
         cout << "---------------------------------\n";
         rule = command.substr(0,5);
-        if(rule == "name "){
+        if(rule == "name "|| "NAME" ){
             command = command.erase(0,5);
             for(int i=0;i<count;i++){
                 fix = a[i];
